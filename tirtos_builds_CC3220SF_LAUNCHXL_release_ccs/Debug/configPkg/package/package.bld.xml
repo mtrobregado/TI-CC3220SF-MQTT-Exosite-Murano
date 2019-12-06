@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/release_pem4.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/ti/ccsv920workspace/CC3220SFv330_Exosite/tirtos_builds_CC3220SF_LAUNCHXL_release_ccs/release.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/release_pem4.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release_pem4.oem4.dep" src="package/cfg/release_pem4.c"/>
+        <srcFile name="package/cfg/release_pem4.dep" src="package/cfg/release_pem4.cfg"/>
+        <srcFile name="package/cfg/release.xem4.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.M4"
+            version="ti.targets.arm.elf.M4{1,0,18.12,3"
+            rawVersion="18.12.3"
+            platform="ti.platforms.tiva:TM4C1294NCPDT:1"
+            isa="v7M4"
+            suffix="em4"
+            rootDir="C:/ti/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="release"
+        pname="release.pem4"
+        target="ti.targets.arm.elf.M4"
+        platform="ti.platforms.simplelink:CC3220SF"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/release_pem4.cfg"
+        xCfgPrefix="package/cfg/release_pem4"
+        cfgScript="C:/ti/ccsv920workspace/CC3220SFv330_Exosite/tirtos_builds_CC3220SF_LAUNCHXL_release_ccs/release.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="release"
+        pname="release.xem4"
+        target="ti.targets.arm.elf.M4"
+        platform="ti.platforms.simplelink:CC3220SF"
+        profile="release"
+        xCfgScript="package/cfg/release_pem4.cfg"
+        xCfgPrefix="package/cfg/release_pem4"
+        cfgScript="C:/ti/ccsv920workspace/CC3220SFv330_Exosite/tirtos_builds_CC3220SF_LAUNCHXL_release_ccs/release.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="release.xem4"
+        args=""
+        groupName="release.xem4"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
